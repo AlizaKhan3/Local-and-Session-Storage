@@ -1,9 +1,14 @@
 import './App.css'
+import AppLocalStorage from './components/LocalStorage/LocalStorage';
+import AppSessionStorage from './components/LocalStorage/SessionStorage/SessionStorage';
 
 function App() {
   return (
-    <h1 class="text-3xl font-bold underline">Understanding Local & Session Storage  </h1>
+    <>
+      <AppLocalStorage />
+      {/* <AppSessionStorage/> */}
+    </>
   )
 }
 
-export default App
+export default App;
