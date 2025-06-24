@@ -1,12 +1,13 @@
-const AppLocalStorage = () => {
-    return (
-        <div className="flex justify-center items-center flex-col mx-auto">
-            <form action="" className="flex justify-center items-center flex-col gap-3">
-                <input type="text" placeholder="name" />                
-                <input type="email" placeholder="name" />
-                <input type="password" placeholder="name" />
+import SignupForm from "./SignupForm"
 
-            </form>
+const AppLocalStorage = () => {
+    const handleSignupData = (formData) => {
+        console.log(formData);
+    }
+    
+    return (
+        <div className="grid place-items-center h-full">
+           <SignupForm submitSignupForm={handleSignupData} />
         </div>
     )
 }

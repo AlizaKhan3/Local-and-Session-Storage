@@ -1,9 +1,9 @@
 //...props inclued everything we can get inside input tag.
 
-const InputComponent = ({type, placeholder, ...props}) => {
+const InputComponent = ({placeholder, ...props}) => {
   return (
     <div>
-      <input type={type} placeholder={placeholder} {...props} /> 
+      <input className="py-2 px-2 rounded-md border-b-fuchsia-800 border-2 focus:outline-none" placeholder={placeholder} {...props} /> 
     </div>
   )
 }
