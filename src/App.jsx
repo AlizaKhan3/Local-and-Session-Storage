@@ -5,8 +5,8 @@ import AppSessionStorage from './components/LocalStorage/SessionStorage/SessionS
 function App() {
   return (
     <>
-      <AppLocalStorage />
-      {/* <AppSessionStorage/> */}
+      {/* <AppLocalStorage /> */}
+      <AppSessionStorage/>
     </>
   )
 }
