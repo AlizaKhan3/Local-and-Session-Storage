@@ -9,7 +9,7 @@ const SignupForm = ({submitSignupForm}) => {
         e.preventDefault();
         console.log("Form submitted")
         
-        submitSignupForm(formData)   //sending data to another component
+        submitSignupForm(formData)   //sending data to another component on submitting
     }
 
     const handleInput = (key, value) => {  //having key and value
