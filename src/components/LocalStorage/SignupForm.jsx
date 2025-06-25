@@ -10,6 +10,7 @@ const SignupForm = ({submitSignupForm}) => {
         console.log("Form submitted")
         
         submitSignupForm(formData)   //sending data to another component on submitting
+        e.target.reset() //empty all fields
     }
 
     const handleInput = (key, value) => {  //having key and value
