@@ -9,7 +9,7 @@ const AppLocalStorage = () => {
         console.log(stringifyData);
 
         // localStorage.setItem("user-data", stringifyData)
-        localStorage.setItem(LOCAL_STORAGE_USERDATA_KEY, formData);
+        localStorage.setItem(LOCAL_STORAGE_USERDATA_KEY, stringifyData);
     }
 
     const getUser = () => {
@@ -18,11 +18,24 @@ const AppLocalStorage = () => {
         console.log(parsedData);
     }
 
+    const removeSTorageItem = () => {
+        localStorage.removeItem(LOCAL_STORAGE_USERDATA_KEY);
+    }
+
+    const clearStorage = () => {
+        localStorage.clear(LOCAL_STORAGE_USERDATA_KEY);
+    }
+
     return (
         <div className="grid place-items-center h-full">
             <SignupForm submitSignupForm={handleSignupData} />
             <h2>//Login details check//</h2>
-            <button onClick={getUser}>GET USER DETAILS</button>
+            <hr />
+            <button onClick={getUser} className="bg-amber-400 p-3 rounded-2xl m-2">GET USER DETAILS</button>
+            <hr />
+            <button onClick={removeSTorageItem} className="bg-amber-400 p-3 rounded-2xl m-2">REMOVE USER DETAILS</button>
+            <hr />
+            <button onClick={clearStorage} className="bg-amber-400 p-3 rounded-2xl m-2">CLEAR ALL STORAGE</button>
         </div>
     )
 }
