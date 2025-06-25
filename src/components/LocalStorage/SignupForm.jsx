@@ -1,6 +1,6 @@
 import { useState } from "react"
-import InputComponent from "./InputComponent"
-import RadioComponent from "./RadioComponent"
+import InputComponent from "../InputComponent"
+import RadioComponent from "../RadioComponent"
 
 const SignupForm = ({submitSignupForm}) => {
      const [formData, setFormData] = useState({}) //Empty Object inside useState coz localStorage stores data in key:value format
