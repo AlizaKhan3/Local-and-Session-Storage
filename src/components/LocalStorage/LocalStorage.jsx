@@ -3,12 +3,27 @@ import SignupForm from "./SignupForm"
 const LOCAL_STORAGE_USERDATA_KEY = "user-data"
 
 const AppLocalStorage = () => {
-    const handleSignupData = (formData) => {
-        console.log(formData);
-        const stringifyData = JSON.stringify(formData);
-        console.log(stringifyData);
+    // const handleSignupData = (formData) => {
+    //     console.log(formData);
+    //     const stringifyData = JSON.stringify(formData);
+    //     console.log(stringifyData);
 
-        // localStorage.setItem("user-data", stringifyData)
+    //     // localStorage.setItem("user-data", stringifyData)
+    //     localStorage.setItem(LOCAL_STORAGE_USERDATA_KEY, stringifyData);
+    // }
+
+
+    const handleSignupData = (formData) => {
+        const userData = localStorage.getItem(LOCAL_STORAGE_USERDATA_KEY);
+        let addnew = [];
+        if (userData) {
+            const parseData = JSON.parse(userData);
+            addnew = [...parseData];
+            console.log(addnew)
+        }
+        addnew = [...addnew, formData]
+        const stringifyData = JSON.stringify(addnew);
+        console.log(stringifyData);
         localStorage.setItem(LOCAL_STORAGE_USERDATA_KEY, stringifyData);
     }
 
